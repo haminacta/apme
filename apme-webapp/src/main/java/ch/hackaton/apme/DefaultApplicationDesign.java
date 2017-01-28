@@ -1,5 +1,6 @@
 package ch.hackaton.apme;
 
+import com.vaadin.ui.Button;
 import com.vaadin.ui.Layout;
 
 /**
@@ -17,5 +18,10 @@ public class DefaultApplicationDesign extends ApplicationDesign {
     public Layout getContent() {
 
         return this.content;
+    }
+
+    public Button getSearchContentButton() {
+
+        return this.searchContentButton;
     }
 }

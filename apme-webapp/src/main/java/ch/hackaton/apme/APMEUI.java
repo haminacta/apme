@@ -42,6 +42,8 @@ public class APMEUI extends UI {
 
         ((CanNavigate) this.presenter).initialize(getNavigator());
 
+        this.presenter.getDesign().getSearchContentButton().focus();
+
         getNavigator().navigateTo("search");
     }
 }
