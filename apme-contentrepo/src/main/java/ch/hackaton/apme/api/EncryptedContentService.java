@@ -4,11 +4,11 @@ import java.io.File;
 import java.io.InputStream;
 
 /**
- * The service to get or create content-files
+ * The service to get or create encrypted content-files
  *
  * @author apme
  */
-public interface ContentService {
+public interface EncryptedContentService {
 
     /**
      * Returns a content-file with the given unique identifier
@@ -26,9 +26,11 @@ public interface ContentService {
      *
      * @param content
      *            the {@link File} of the content-file, that should be created
+     * @param providerId
+     *            the unique identifier of the user who's providing the content
      * @return the unique identifier of the created content-file
      * @throws ContentResourceCreateException
      *             that's thrown if the content couldn't created
      */
-    String create(File content) throws ContentResourceCreateException;
+    String create(File content, String providerId) throws ContentResourceCreateException;
 }

@@ -2,6 +2,9 @@ package ch.hackaton.apme.blockchain;
 
 import java.util.List;
 
+import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.inject.Default;
+
 import ch.hackaton.apme.blockchain.api.ContentContract;
 
 /**
@@ -9,6 +12,8 @@ import ch.hackaton.apme.blockchain.api.ContentContract;
  *
  * @author apme
  */
+@Default
+@ApplicationScoped
 public class EtherumContentContract implements ContentContract {
 
     @Override

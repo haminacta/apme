@@ -34,11 +34,11 @@ public class IPFSContentService implements ContentService {
     }
 
     @Override
-    public InputStream get(final String fileId) throws ContentResourceNotFoundException {
+    public InputStream get(final String contentId) throws ContentResourceNotFoundException {
 
         try {
 
-            return this.ipfs.catStream(Multihash.fromBase58(fileId));
+            return this.ipfs.catStream(Multihash.fromBase58(contentId));
 
         } catch (final IOException e) {
             throw new ContentResourceNotFoundException(e);
@@ -46,11 +46,11 @@ public class IPFSContentService implements ContentService {
     }
 
     @Override
-    public String create(final File file) throws ContentResourceCreateException {
+    public String create(final File content) throws ContentResourceCreateException {
 
         try {
 
-            return this.ipfs.add(new NamedStreamable.FileWrapper(file)).hash.toBase58();
+            return this.ipfs.add(new NamedStreamable.FileWrapper(content)).hash.toBase58();
 
         } catch (final IOException e) {
             throw new ContentResourceCreateException(e);

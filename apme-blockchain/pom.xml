@@ -25,5 +25,10 @@
       <artifactId>ethereumj-core</artifactId>
       <version>1.4.0-RELEASE</version>
     </dependency>
+    <dependency>
+      <groupId>javax</groupId>
+      <artifactId>javaee-api</artifactId>
+      <version>7.0</version>
+    </dependency>
   </dependencies>
 </project>
