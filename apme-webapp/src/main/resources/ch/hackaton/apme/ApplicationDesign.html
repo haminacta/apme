@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;apme_flat&quot;}">
+  <meta name="vaadin-version" content="7.7.0">
+ </head> 
+ <body> 
+  <vaadin-horizontal-layout caption="Browse \n Purchases" style-name="valo-menu-responsive" responsive id="responsive-application-template" size-full> 
+   <vaadin-css-layout style-name="valo-menu"> 
+    <vaadin-css-layout style-name="valo-menu-part"> 
+     <vaadin-horizontal-layout style-name="valo-menu-title" width-full _id="menuTitle"> 
+      <vaadin-label size-auto _id="menuTitleLabel" :middle :expand>
+        The 
+       <strong>APME</strong> 
+      </vaadin-label> 
+     </vaadin-horizontal-layout> 
+     <vaadin-button icon="fonticon://FontAwesome/f03a" style-name="primary small valo-menu-toggle" plain-text _id="menuToggle">
+       Menu 
+     </vaadin-button> 
+     <vaadin-css-layout style-name="valo-menuitems" _id="menuItems"> 
+      <vaadin-button icon="fonticon://FontAwesome/f07a" primary-style-name="valo-menu-item" width-full plain-text _id="searchContentButton">
+        Browse &amp; Buy Content 
+      </vaadin-button> 
+      <vaadin-button icon="fonticon://FontAwesome/f0b1" primary-style-name="valo-menu-item" _id="browsePurchasesButton">
+        Browse Purchases 
+      </vaadin-button> 
+      <vaadin-button icon="fonticon://FontAwesome/f093" primary-style-name="valo-menu-item" _id="provideConentButton">
+        Provide Content 
+      </vaadin-button> 
+      <vaadin-button icon="fonticon://FontAwesome/f0C0" primary-style-name="valo-menu-item" _id="browseBuyersButton">
+        Browse Buyers 
+      </vaadin-button> 
+      <vaadin-button icon="fonticon://FontAwesome/f08b" primary-style-name="valo-menu-item" plain-text _id="logoutButton">
+        Logout 
+      </vaadin-button> 
+     </vaadin-css-layout> 
+    </vaadin-css-layout> 
+   </vaadin-css-layout> 
+   <vaadin-vertical-layout spacing margin _id="content" :expand></vaadin-vertical-layout> 
+  </vaadin-horizontal-layout>  
+ </body>
+</html>
