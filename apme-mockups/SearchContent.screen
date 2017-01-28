@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Browser" id="2" x="48" y="96" width="1920" height="1080" text="Browser&#xA;http://apme.com" measuredWidth="1920" measuredHeight="1080">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Table" id="11" x="104" y="256" height="881" text="Title,Provider,(align:right).Creation Date, Media Type,(align:right).Price,&#xA;Who's that Girl,Guber-Peters Company,07.08.1986,Movie,CHF 15.00, Buy&#xA;Stolen Love,Rose Bloom,15.01.2017,eBook,CHF   8.00, Buy&#xA;Learn Python in One Day and Learn It Well.,Jamie Chan,07.01.2015,eBook,CHF 10.00, Buy&#xA;Norton Security Standard,Symantec,04.03.2016,Software,CHF 20.00, Buy&#xA;Deadpool,20th Century Fox,08.02.2016,Movie,CHF 18.00, Buy&#xA;*,*,*,*,CHF    *.00, Buy&#xA;*,*,*,*,CHF    *.00, Buy&#xA;*,*,*,*,CHF    *.00, Buy&#xA;" measuredWidth="670" measuredHeight="881" alternative="#eee">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Placeholder" id="13" x="800" y="208" width="1120" height="928" text="Preview Section \n\n Trailer, Abstract, Cover, ..." measuredWidth="1120" measuredHeight="928"/>
+  <widgets xsi:type="model:SearchField" id="14" x="104" y="208" width="669" text="Search" measuredWidth="669" measuredHeight="24">
+    <font/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

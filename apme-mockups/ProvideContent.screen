@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Browser" id="1" x="48" y="96" width="1920" height="1080" text="Browser&#xA;http://apme.com" measuredWidth="1920" measuredHeight="1080">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="16" x="621" y="494" measuredWidth="774" measuredHeight="284">
+    <widgets xsi:type="model:TextField" id="2" x="152" y="1" width="127" text="AnyMovieTrailer.mkv" measuredWidth="127" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Button" id="3" x="304" text="OK" measuredWidth="38" measuredHeight="25">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="5" x="152" y="43" width="127" text="AnyMovie.mkv" measuredWidth="127" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Button" id="6" x="304" y="42" text="OK" measuredWidth="38" measuredHeight="25">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Spinner" id="7" x="584" y="1" width="190" text="42.00" measuredWidth="190" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="8" x="496" y="1" width="49" text="Price" measuredWidth="49" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="9" y="43" width="49" text="Content" measuredWidth="49" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="10" y="1" width="113" text="Preview Content" measuredWidth="113" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Table" id="11" x="152" y="107" width="622" height="120" text="Name,(w:30)(align:right).Percentage Amount&#xA;Background Singer 1, 0.05&#xA;Background Singer 2, 0.05&#xA;Songtexter, 0.30" measuredWidth="622" measuredHeight="120" alternative="#eee">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="13" y="107" text="Co-Providers / -Authors" measuredWidth="142" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Button" id="14" x="710" y="259" text="Commit" measuredWidth="64" measuredHeight="25">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Checkbox" id="15" x="152" y="260" text="Yes, I agree to the licence agreement" measuredWidth="231" measuredHeight="23">
+      <font/>
+    </widgets>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Browser" id="1" x="48" y="96" width="1920" height="1080" text="Browser&#xA;http://apme.com" measuredWidth="1920" measuredHeight="1080">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="4" x="676" y="224" measuredWidth="664" measuredHeight="936">
+    <widgets xsi:type="model:Table" id="2" x="248" width="416" height="936" text="Buyer,(align:right).Selling date&#xA;Joseph Meyer, 11.05.2015&#xA;Gustav Lee, 03.02.2015" measuredWidth="416" measuredHeight="936" alternative="#eee">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:List" id="3" width="232" height="936" text="My provided Content 1&#xA;My provided Content 2&#xA;|My provided Content 3&#xA;My provided Content 4&#xA;My provided Content 5&#xA;My provided Content 6&#xA;My provided Content *" measuredWidth="232" measuredHeight="936">
+      <font bold="true"/>
+      <items x="0" y="2" width="232" height="21" text="My provided Content 1"/>
+      <items x="0" y="23" width="232" height="21" text="My provided Content 2"/>
+      <items x="0" y="44" width="232" height="21" text="|My provided Content 3"/>
+      <items x="0" y="65" width="232" height="21" text="My provided Content 4"/>
+      <items x="0" y="86" width="232" height="21" text="My provided Content 5"/>
+      <items x="0" y="107" width="232" height="21" text="My provided Content 6"/>
+      <items x="0" y="128" width="232" height="21" text="My provided Content *"/>
+    </widgets>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:WidgetGroup" id="11" x="48" y="96" measuredWidth="1920" measuredHeight="1080">
+    <widgets xsi:type="model:Browser" id="2" width="1920" height="1080" text="Browser&#xA;http://apme.com" measuredWidth="1920" measuredHeight="1080">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Panel" id="10" x="824" y="464" width="273" height="145" measuredWidth="273" measuredHeight="145"/>
+    <widgets xsi:type="model:WidgetGroup" id="9" x="835" y="485" measuredWidth="249" measuredHeight="109">
+      <widgets xsi:type="model:TextField" id="3" x="96" width="153" text="apme" measuredWidth="153" measuredHeight="23">
+        <font/>
+      </widgets>
+      <widgets xsi:type="model:Label" id="4" text="Username" measuredWidth="64" measuredHeight="23">
+        <font/>
+      </widgets>
+      <widgets xsi:type="model:TextField" id="5" x="96" y="36" width="153" text="\*\*\*\*\*\*\*\*\*\*\*\*" measuredWidth="153" measuredHeight="23">
+        <font/>
+      </widgets>
+      <widgets xsi:type="model:Label" id="6" y="36" text="Password" measuredWidth="61" measuredHeight="23">
+        <font/>
+      </widgets>
+      <widgets xsi:type="model:Button" id="7" x="190" y="84" text="Sign in" measuredWidth="59" measuredHeight="25">
+        <font/>
+      </widgets>
+      <widgets xsi:type="model:Checkbox" id="8" y="85" text="Remember me" measuredWidth="103" measuredHeight="23">
+        <font/>
+      </widgets>
+    </widgets>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

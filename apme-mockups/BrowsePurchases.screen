@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Browser" id="1" x="48" y="96" width="1920" height="1080" text="Browser&#xA;http://apme.com" measuredWidth="1920" measuredHeight="1080">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Table" id="5" x="735" y="256" height="881" text="Title,Provider,(align:right).Creation Date, Media Type,(align:right).Price,&#xA;Who's that Girl,Guber-Peters Company,07.08.1986,Movie,CHF 15.00, Download&#xA;*,*,*,*,CHF    *.00, Download&#xA;*,*,*,*,CHF    *.00, Download&#xA;*,*,*,*,CHF    *.00, Download&#xA;" measuredWidth="546" measuredHeight="881" alternative="#eee">
+    <font/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>
