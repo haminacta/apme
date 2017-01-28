@@ -10,4 +10,20 @@
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
+
+  <repositories>
+    <repository>
+      <id>oss.jfrog.org</id>
+      <name>Repository from Bintray</name>
+      <url>http://dl.bintray.com/ethereum/maven</url>
+    </repository>
+  </repositories>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.ethereum</groupId>
+      <artifactId>ethereumj-core</artifactId>
+      <version>1.4.0-RELEASE</version>
+    </dependency>
+  </dependencies>
 </project>
