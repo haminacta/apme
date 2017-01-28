@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <meta charset="utf-8"> <!-- needed for ether symbol to display correctly -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://blockone.thomsonreuters.com/wallet-bar/bundle.js"></script>
+        <script src="https://rawgit.com/ethereum/web3.js/develop/dist/web3.min.js"></script>
+    </head>
+    <body>
+        <div id="app" style="display: none; margin-left: 20px">
+            <h1>Opinion poll</h1>
+            <span>Blue: </span><span id="blues"></span><br>
+            <span>Red: </span><span id="reds"></span><br>
+            <button onclick="vote(0)">Vote blue</button>
+            <button onclick="vote(1)">Vote red</button>
+            <br><br><span id="status"></span>
+        </div>
+
+        <script>
+            // PUT YOUR CONTRACT'S ABI HERE
+            var abi = [{"constant":true,"inputs":[],"name":"red","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"voteRed","type":"bool"}],"name":"vote","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"getEntitlement","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"blue","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"}];
+
+            // PUT YOUR UNIQUE DAPP ID HERE
+            var dappId = "com.inacta.ch.apme";
+
+            // PUT YOUR CONTRACT ADDRESS HERE
+            var contractAddress = "0xCE216B16EC02c8Aee953b93d578f114820ef2F03";
+
+            var walletBar = new WalletBar({
+                dappNamespace: dappId,
+                blockchain: "ropsten",
+                callbacks: { signOut: function () { location.reload(); } }
+            });
+
+            var web3 = new Web3();
+            var myContract;
+            walletBar.applyHook(web3)
+            .then(function() {
+                document.getElementById("app").style.display="";
+                myContract = web3.eth.contract(abi).at(contractAddress);
+
+                setInterval( function () {
+                    myContract.blue(function(e, c) { if(!e) document.getElementById("blues").innerText=c; });
+                    myContract.red(function(e, c) { if(!e) document.getElementById("reds").innerText=c; });
+                }, 1000);
+            })
+            .catch(function(err) {
+                console.log(err);
+            });
+
+            function vote(arg) {
+                var account = walletBar.getCurrentAccount(); // get account selected in wallet bar
+                if (!account) return alert("You must log in to transact");
+                walletBar.createSecureSigner();
+                myContract.vote.estimateGas(arg, { from: account }, function (err1, gas) {
+                    if(err1) return alert("Error: "+err1);
+                    myContract.vote.sendTransaction(arg, { gas: gas, from: account }, function (err2, hash) {
+                        if(err2) return alert("Error: "+err2);
+                        document.getElementById("status").innerText = "Last vote Tx ID: "+hash;
+                    });
+                });
+            }
+        </script>
+    </body>
+</html>
