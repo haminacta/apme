@@ -1,0 +1,37 @@
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+   http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+
+  <security-constraint>
+    <display-name>SecureApplicationConstraint</display-name>
+    <web-resource-collection>
+      <web-resource-name>SecureApplicationConstraint</web-resource-name>
+      <url-pattern>/apme/*</url-pattern>
+    </web-resource-collection>
+    <user-data-constraint>
+      <transport-guarantee>NONE</transport-guarantee>
+    </user-data-constraint>
+  </security-constraint>
+
+  <listener>
+    <listener-class>org.atmosphere.cpr.SessionSupport</listener-class>
+  </listener>
+
+  <context-param>
+    <param-name>org.atmosphere.cpr.sessionSupport</param-name>
+    <param-value>true</param-value>
+  </context-param>
+
+  <login-config>
+    <auth-method>FORM</auth-method>
+    <realm-name>ims-domain</realm-name>
+    <form-login-config>
+      <form-login-page>/login</form-login-page>
+      <form-error-page>/login</form-error-page>
+    </form-login-config>
+  </login-config>
+
+  <session-config>
+    <session-timeout>30</session-timeout>
+  </session-config>
+</web-app>

@@ -17,33 +17,28 @@ import com.vaadin.ui.UI;
  * The UI is initialized using {@link #init(VaadinRequest)}. This method is intended to be overridden to add component to the user interface and
  * initialize non-component functionality.
  */
-@CDIUI("app")
+@CDIUI("login")
 @Theme("apme_flat")
 @SuppressWarnings("serial")
-public class APMEUI extends UI {
+public class LoginUI extends UI {
 
     @Inject
     private CDIViewProvider cdiViewProvider;
 
     @Inject
-    private DesignPresenter<DefaultApplicationDesign> presenter;
+    private DesignPresenter<DefaultLoginDesign> presenter;
 
     @PostConstruct
     public void initialize() {
 
         setContent(this.presenter.getDesign());
 
-        final Navigator navigator = new Navigator(this, this.presenter.getDesign().getContent());
+        final Navigator navigator = new Navigator(this, this);
         navigator.addProvider(this.cdiViewProvider);
     }
 
     @Override
     protected void init(final VaadinRequest vaadinRequest) {
 
-        ((CanNavigate) this.presenter).initialize(getNavigator());
-
-        this.presenter.getDesign().getSearchContentButton().focus();
-
-        getNavigator().navigateTo("search");
     }
 }

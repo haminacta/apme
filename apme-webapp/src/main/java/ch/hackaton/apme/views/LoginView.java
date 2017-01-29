@@ -13,12 +13,12 @@ import ch.hackaton.apme.DesignPresenter;
 /**
  * @author apme
  */
-@CDIView("provide")
+@CDIView("")
 @SuppressWarnings("serial")
-public class ProvideContentView extends VerticalLayout implements View {
+public class LoginView extends VerticalLayout implements View {
 
     @Inject
-    private DesignPresenter<DefaultProvideContentDesign> presenter;
+    private DesignPresenter<DefaultLoginDesign> presenter;
 
     @PostConstruct
     public void initialize() {
