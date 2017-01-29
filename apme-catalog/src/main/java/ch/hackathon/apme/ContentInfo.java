@@ -6,6 +6,7 @@ import java.util.Currency;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
@@ -17,16 +18,12 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "CNT_CATALOG")
-@SequenceGenerator(initialValue = 1,
-        allocationSize = 1,
-        name = "CNT_SEQ_CATALOG",
-        sequenceName = "CNT_SEQ_CATALOG")
 public class ContentInfo implements Serializable {
 
     private static final long serialVersionUID = -6565327322728128525L;
 
     @Id
-    @GeneratedValue(generator = "CNT_SEQ_CATALOG")
+    @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name = "CNT_ID",
             unique = true,
             nullable = false)

@@ -1,25 +1,25 @@
-<xa-datasource jndi-name="java:jboss/datasources/CONTENT_CATALOG_DB" pool-name="contentdb" enabled="true" use-ccm="false">
-    <xa-datasource-property name="Url">
-        jdbc:hsqldb:file:../../hsql-data/LiferayDS
-    </xa-datasource-property>
+<datasource jta="false" jndi-name="java:/jdbc/CONTENT_CATALOG_DB" pool-name="contentdb" enabled="true" use-java-context="true" use-ccm="true">
+    <connection-url>jdbc:hsqldb:file:../../hsql-data/ContentDS</connection-url>
+    <driver-class>org.hsqldb.jdbc.JDBCDriver</driver-class>
     <driver>hsqldb</driver>
-    <xa-pool>
-        <max-pool-size>10</max-pool-size>
-        <is-same-rm-override>false</is-same-rm-override>
-        <interleaving>false</interleaving>
-        <pad-xid>false</pad-xid>
-        <wrap-xa-resource>false</wrap-xa-resource>
-    </xa-pool>
+    <pool>
+        <min-pool-size>10</min-pool-size>
+        <max-pool-size>20</max-pool-size>
+        <prefill>false</prefill>
+        <use-strict-min>false</use-strict-min>
+        <flush-strategy>EntirePool</flush-strategy>
+    </pool>
     <security>
         <user-name>sa</user-name>
         <password></password>
     </security>
     <validation>
+        <check-valid-connection-sql>SELECT 1 FROM INFORMATION_SCHEMA.SYSTEM_USERS</check-valid-connection-sql>
         <validate-on-match>false</validate-on-match>
         <background-validation>false</background-validation>
     </validation>
-    <statement>
-        <prepared-statement-cache-size>0</prepared-statement-cache-size>
-        <share-prepared-statements>false</share-prepared-statements>
-    </statement>
-</xa-datasource>
+</datasource>
+
+<driver name="hsqldb" module="org.hsqldb">
+    <xa-datasource-class>org.hsqldb.jdbc.JDBCDriver</xa-datasource-class>
+</driver>
