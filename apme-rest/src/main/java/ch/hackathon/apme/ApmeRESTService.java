@@ -1,5 +1,7 @@
 package ch.hackathon.apme;
 
+import java.util.List;
+
 import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -39,4 +41,13 @@ public class ApmeRESTService {
         }
         return ci;
     }
+    
+	
+	@GET
+	@Produces({ MediaType.APPLICATION_JSON })
+	@Path("contents")
+	public List<ContentInfo> list() {
+
+		return contentInfoService.list();
+	}
 }
