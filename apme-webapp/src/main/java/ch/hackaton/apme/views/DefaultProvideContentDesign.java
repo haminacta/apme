@@ -10,5 +10,8 @@ public class DefaultProvideContentDesign extends ProvideContentDesign {
     public DefaultProvideContentDesign() {
 
         super();
+
+        this.priceField.setConverter(Long.class);
+        this.priceField.setNullRepresentation("");
     }
 }

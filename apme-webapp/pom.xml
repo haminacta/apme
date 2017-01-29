@@ -52,6 +52,11 @@
       <version>0.0.1-SNAPSHOT</version>
     </dependency>
     <dependency>
+      <groupId>ch.hackaton.apme</groupId>
+      <artifactId>apme-contentrepo</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    <dependency>
       <groupId>com.vaadin</groupId>
       <artifactId>vaadin-server</artifactId>
     </dependency>

@@ -1,18 +1,16 @@
 package ch.hackathon.apme;
 
 import java.io.Serializable;
-import java.util.Currency;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 /**
- * 
+ *
  * @author apme
  *
  */
@@ -23,7 +21,7 @@ public class ContentInfo implements Serializable {
     private static final long serialVersionUID = -6565327322728128525L;
 
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "CNT_ID",
             unique = true,
             nullable = false)
@@ -33,112 +31,129 @@ public class ContentInfo implements Serializable {
             nullable = false,
             length = 256)
     private String title;
-    
+
     @Column(name = "CNT_DESC",
             nullable = false,
             length = 256)
     private String description;
-    
+
     @Column(name = "CNT_MULTIHASH",
             nullable = false,
-            length = 32)
+            length = 64)
     private String multihash;
-    
+
     @Column(name = "CNT_DEMO_MULTIHASH",
             nullable = false,
-            length = 32)
+            length = 64)
     private String demoMultihash;
-    
+
     @Column(name = "CNT_OWNER",
             nullable = false,
             length = 256)
     private String owner;
-    
+
     @Column(name = "CNT_OWNER_WALLET",
             nullable = false,
-            length = 32)
+            length = 64)
     private String ownerWallet;
-    
+
     @Column(name = "CNT_PRICE",
             nullable = false)
     private Long price;
 
     @Column(name = "CNT_PUBLIC_KEY",
             nullable = false,
-            length = 32)
+            length = 64)
     private String publickey;
 
-	public Integer getId() {
-		return id;
-	}
+    public Integer getId() {
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+        return this.id;
+    }
 
-	public String getTitle() {
-		return title;
-	}
+    public void setId(final Integer id) {
 
-	public void setTitle(String title) {
-		this.title = title;
-	}
+        this.id = id;
+    }
 
-	public String getDescription() {
-		return description;
-	}
+    public String getTitle() {
 
-	public void setDescription(String description) {
-		this.description = description;
-	}
+        return this.title;
+    }
 
-	public String getMultihash() {
-		return multihash;
-	}
+    public void setTitle(final String title) {
 
-	public void setMultihash(String multihash) {
-		this.multihash = multihash;
-	}
+        this.title = title;
+    }
 
-	public String getDemoMultihash() {
-		return demoMultihash;
-	}
+    public String getDescription() {
 
-	public void setDemoMultihash(String demoMultihash) {
-		this.demoMultihash = demoMultihash;
-	}
+        return this.description;
+    }
 
-	public String getOwner() {
-		return owner;
-	}
+    public void setDescription(final String description) {
 
-	public void setOwner(String owner) {
-		this.owner = owner;
-	}
+        this.description = description;
+    }
 
-	public String getOwnerWallet() {
-		return ownerWallet;
-	}
+    public String getMultihash() {
 
-	public void setOwnerWallet(String ownerWallet) {
-		this.ownerWallet = ownerWallet;
-	}
+        return this.multihash;
+    }
 
-	public Long getPrice() {
-		return price;
-	}
+    public void setMultihash(final String multihash) {
 
-	public void setPrice(Long price) {
-		this.price = price;
-	}
+        this.multihash = multihash;
+    }
 
-	public String getPublickey() {
-		return publickey;
-	}
+    public String getDemoMultihash() {
 
-	public void setPublickey(String publickey) {
-		this.publickey = publickey;
-	}
-    
-    
+        return this.demoMultihash;
+    }
+
+    public void setDemoMultihash(final String demoMultihash) {
+
+        this.demoMultihash = demoMultihash;
+    }
+
+    public String getOwner() {
+
+        return this.owner;
+    }
+
+    public void setOwner(final String owner) {
+
+        this.owner = owner;
+    }
+
+    public String getOwnerWallet() {
+
+        return this.ownerWallet;
+    }
+
+    public void setOwnerWallet(final String ownerWallet) {
+
+        this.ownerWallet = ownerWallet;
+    }
+
+    public Long getPrice() {
+
+        return this.price;
+    }
+
+    public void setPrice(final Long price) {
+
+        this.price = price;
+    }
+
+    public String getPublickey() {
+
+        return this.publickey;
+    }
+
+    public void setPublickey(final String publickey) {
+
+        this.publickey = publickey;
+    }
+
 }
