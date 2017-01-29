@@ -36,7 +36,7 @@ public class PublicUI extends UI {
         if (request.getUserPrincipal() != null) {
             Page.getCurrent().setLocation("./app");
         } else {
-            Page.getCurrent().setLocation("./login");
+            Page.getCurrent().setLocation("./app");
         }
     }
 }
