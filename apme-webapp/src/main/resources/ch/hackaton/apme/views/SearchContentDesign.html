@@ -12,50 +12,62 @@
      <colgroup> 
       <col property-id="Project" sortable> 
       <col property-id="Status" sortable> 
+	  <col property-id="Price" sortable> 
      </colgroup> 
      <thead> 
       <tr default> 
-       <th plain-text>Project</th> 
-       <th plain-text>Status</th> 
+       <th plain-text>Item</th> 
+       <th plain-text>Price</th> 
+	   <th plain-text>Buy</th> 
       </tr> 
      </thead> 
      <tbody> 
       <tr> 
-       <td>Customer Project 1</td> 
-       <td>OK</td> 
-      </tr> 
-      <tr> 
-       <td>Customer Project 2</td> 
-       <td>OK</td> 
-      </tr> 
-      <tr> 
-       <td>Customer Project 3</td> 
-       <td>OK</td> 
-      </tr> 
-      <tr> 
-       <td>Customer Project 4</td> 
-       <td>OK</td> 
-      </tr> 
-      <tr> 
-       <td>Customer Project 5</td> 
-       <td>OK</td> 
-      </tr> 
-      <tr> 
-       <td>Customer Project 6</td> 
-       <td>OK</td> 
-      </tr> 
-      <tr> 
-       <td>Customer Project 7</td> 
-       <td>OK</td> 
-      </tr> 
-      <tr> 
-       <td>Customer Project 8</td> 
-       <td>OK</td> 
-      </tr> 
-      <tr> 
-       <td>Customer Project 9</td> 
-       <td>OK</td> 
-      </tr> 
+       <td>Pulp Fiction USA · 1994</td> 
+	   <td>250 FINNEY</td>
+       <td><button onclick="buy(250)">Buy</button></td> 
+      </tr>
+ <tr> 
+       <td>The Big Lebowski USA · 1998</td> 
+	   <td>150 FINNEY</td>
+       <td><button onclick="buy(150)">Buy</button></td> 
+      </tr>   
+ <tr> 
+       <td>Gran Torino USA · 2008</td> 
+	   <td>50 FINNEY</td>
+       <td><button onclick="buy(50)">Buy</button></td> 
+      </tr>   
+ <tr> 
+       <td>Butterfly Effect USA  2004</td> 
+	   <td>25 FINNEY</td>
+       <td><button onclick="buy(25)">Buy</button></td> 
+      </tr>   
+ 
+       <tr> 
+       <td>Ulysses</td> 
+	   <td>49 FINNEY</td>
+       <td><button onclick="buy(49)">Buy</button></td> 
+      </tr>  
+       <tr> 
+       <td>Don Quixote</td> 
+	   <td>22 FINNEY</td>
+       <td><button onclick="buy(22)">Buy</button></td> 
+      </tr>  
+       <tr> 
+       <td>Moby Dick</td> 
+	   <td>19 FINNEY</td>
+       <td><button onclick="buy(19)">Buy</button></td> 
+      </tr>  
+       <tr> 
+       <td>Hamlet</td> 
+	   <td>29 FINNEY</td>
+       <td><button onclick="buy(29)">Buy</button></td> 
+      </tr>  
+       <tr> 
+       <td>The Great Gatsby</td> 
+	   <td>59 FINNEY</td>
+       <td><button onclick="buy(59)">Buy</button></td> 
+      </tr>     	  
      </tbody> 
     </table> 
    </vaadin-grid> 
