@@ -12,5 +12,6 @@
     <module>apme-catalog</module>
     <module>apme-contentrepo</module>
     <module>apme-webapp</module>
+    <module>apme-rest</module>
   </modules>
 </project>
