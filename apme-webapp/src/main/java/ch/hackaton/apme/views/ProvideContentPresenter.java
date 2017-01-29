@@ -48,11 +48,15 @@ public class ProvideContentPresenter implements DesignPresenter<DefaultProvideCo
         this.design.previewUpload.addSucceededListener(event -> {
 
             this.previewContent = new File(System.getProperty("java.io.tmpdir"), event.getFilename());
+
+            Notification.show("Upload preview content succeeded");
         });
 
         this.design.contentUpload.addSucceededListener(event -> {
 
             this.content = new File(System.getProperty("java.io.tmpdir"), event.getFilename());
+
+            Notification.show("Upload content succeeded");
         });
 
         this.design.commitButton.addClickListener(clickEvent -> {
@@ -81,7 +85,7 @@ public class ProvideContentPresenter implements DesignPresenter<DefaultProvideCo
 
                     this.contentInfoService.save(contentInfo);
 
-                    Notification.show("Upload succeed");
+                    Notification.show("Content created");
 
                     this.content = null;
                     this.previewContent = null;
