@@ -7,7 +7,7 @@ import java.util.List;
  * @author apme
  *
  */
-public interface ContentService {
+public interface ContentInfoService {
 
 	/**
 	 * 

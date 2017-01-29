@@ -9,7 +9,7 @@ import javax.inject.Inject;
  * @author inacta AG
  *
  */
-public class DBContentService implements ContentService {
+public class DBContentInfoService implements ContentInfoService {
 
 
 	@Inject
