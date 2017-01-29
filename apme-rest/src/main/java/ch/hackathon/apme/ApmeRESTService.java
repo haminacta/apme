@@ -19,7 +19,7 @@ import javax.ws.rs.core.Response.ResponseBuilder;
 public class ApmeRESTService {
 
 	@Inject
-	private ContentInfoDAO contentInfoDao;
+	private ContentService contentService;
 
 	@GET
 	@Produces({ MediaType.APPLICATION_JSON })
@@ -33,7 +33,7 @@ public class ApmeRESTService {
 			Response response = builder.build();
 			throw new WebApplicationException(response);
 		}
-		ContentInfo ci = contentInfoDao.get(id);
+		ContentInfo ci = contentService.get(id);
 		if(ci == null){
 			ci = new ContentInfo();
 		}
